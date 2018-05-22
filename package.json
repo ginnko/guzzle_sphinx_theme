@@ -1,0 +1,25 @@
+{
+  "name": "guzzle_sphinx_theme",
+  "version": "1.0.0",
+  "description": "=================== Guzzle Sphinx Theme ===================",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginnko/guzzle_sphinx_theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ginnko/guzzle_sphinx_theme/issues"
+  },
+  "homepage": "https://github.com/ginnko/guzzle_sphinx_theme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.5"
+  }
+}
