@@ -23,11 +23,12 @@ html_sidebars = {
            'searchbox.html']
 }
 
-import guzzle_sphinx_theme
+# import guzzle_sphinx_theme
 
-extensions.append("guzzle_sphinx_theme")
-html_theme_path = guzzle_sphinx_theme.html_theme_path()
+# extensions.append("guzzle_sphinx_theme")
+# html_theme_path = guzzle_sphinx_theme.html_theme_path()
 html_theme = 'guzzle_sphinx_theme'
+html_theme_path = ['../guzzle_sphinx_theme']
 
 # Guzzle theme options (see theme.conf for more information)
 html_theme_options = {
