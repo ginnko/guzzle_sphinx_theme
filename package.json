@@ -20,6 +20,8 @@
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-shell": "^0.6.5"
+    "gulp-batch": "^1.0.5",
+    "gulp-shell": "^0.6.5",
+    "gulp-watch": "^5.0.0"
   }
 }
