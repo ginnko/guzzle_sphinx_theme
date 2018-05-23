@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const shell = require('gulp-shell');
-const watch = require('gulp-watch');
-const batch = require('gulp-batch');
 
 const dir = 'guzzle_sphinx_theme/guzzle_sphinx_theme';
 
@@ -23,23 +21,5 @@ gulp.task('make-html', shell.task([
 ]));
 
 
-gulp.task('new-html', function () {
-  watch(dir + '/*.html', batch(function (events, done) {
-      gulp.start('make-html', done);
-  }));
-});
 
-gulp.task('new-css', function () {
-  watch(dir + '/static/css/*.css', batch(function (events, done) {
-      gulp.start('make-html', done);
-  }));
-});
-
-gulp.task('new-js', function () {
-  watch(dir + '/static/js/*.js', batch(function (events, done) {
-      gulp.start('make-html', done);
-  }));
-});
-
-
-gulp.task('default', ['browser-sync', 'new-css', 'new-html', 'new-js']);
+gulp.task('default', ['browser-sync']);
