@@ -1,0 +1,12 @@
+<div class="download">
+  <h2>下载</h2>
+  <ul>
+    {% for link in download_links %}
+      {% for key,value in link.items() %}
+      <li class="download_item">
+          <a href="{{ pathto(value) }}">{{ key }}</a>
+      </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>

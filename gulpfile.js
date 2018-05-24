@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const shell = require('gulp-shell');
 
-const dir = 'guzzle_sphinx_theme/guzzle_sphinx_theme';
+const dir = 'ustack_sphinx_theme/ustack_sphinx_theme';
 
 gulp.task('browser-sync', ['make-html'], () => {
   browserSync.init({
@@ -13,6 +13,7 @@ gulp.task('browser-sync', ['make-html'], () => {
   gulp.watch(dir + '/*.html', ['make-html']);
   gulp.watch(dir + '/static/css/*.css', ['make-html']);
   gulp.watch(dir + '/static/js/*.js', ['make-html']);
+  gulp.watch('./demo/conf.py', ['make-html']);
   gulp.watch("./demo/_build/html/*.html").on('change', browserSync.reload);
 });
 

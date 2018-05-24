@@ -4,33 +4,32 @@ from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
 
-project = u'Demo'
-copyright = u'2015, My Name'
+project = u'UDS'
 master_doc = 'index'
 templates_path = ['_templates']
 extensions = []
 source_suffix = '.rst'
-version = 'X.Y.Z'
 exclude_patterns = ['_build']
-
+source_encoding = 'utf-8'
+language = 'zh_CN'
 # -- HTML theme settings ------------------------------------------------
 
 html_show_sourcelink = False
-html_sidebars = {
-    '**': ['logo-text.html',
-           'globaltoc.html',
-           'localtoc.html',
-           'searchbox.html']
+
+# import ustack_sphinx_theme
+
+# extensions.append("ustack_sphinx_theme")
+# html_theme_path = ustack_sphinx_theme.html_theme_path()
+html_theme = 'ustack_sphinx_theme'
+html_theme_path = [ "../ustack_sphinx_theme/" ]
+
+html_context = {
+    "download_links": [
+        {"PDF": "https://xxxxxxxxx.pdf"}
+    ]
 }
 
-# import guzzle_sphinx_theme
-
-# extensions.append("guzzle_sphinx_theme")
-# html_theme_path = guzzle_sphinx_theme.html_theme_path()
-html_theme = 'guzzle_sphinx_theme'
-html_theme_path = ['../guzzle_sphinx_theme']
-
-# Guzzle theme options (see theme.conf for more information)
+# theme options (see theme.conf for more information)
 html_theme_options = {
-    "base_url": "http://my-site.com/docs/"
+
 }

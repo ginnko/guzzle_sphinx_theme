@@ -1,43 +1,39 @@
 ===================
-Guzzle Sphinx Theme
+Ustack Sphinx Theme
 ===================
 
-Sphinx theme used by Guzzle: http://guzzlephp.org
+这个模板在 **guzzle_sphinx_theme** 的基础上修改而成，原模板地址：https://github.com/guzzle/guzzle_sphinx_theme
 
-Installation
+安装
 ============
 
-Install via pip::
+通过pip安装::
 
-    $ pip install guzzle_sphinx_theme
+    $ pip install ustack_sphinx_theme
 
-or if you have the code checked out locally::
+或者下载代码后本地安装::
 
     $ python setup.py install
 
-Configuration
+配置
 =============
 
-Add the following to your conf.py:
+将以下代码加入配置文件conf.py中:
 
 .. code-block:: python
 
-    import guzzle_sphinx_theme
+    import ustack_sphinx_theme
 
-    html_theme_path = guzzle_sphinx_theme.html_theme_path()
-    html_theme = 'guzzle_sphinx_theme'
+    html_theme_path = ustack_sphinx_theme.html_theme_path()
+    html_theme = 'ustack_sphinx_theme'
 
     # Register the theme as an extension to generate a sitemap.xml
-    extensions.append("guzzle_sphinx_theme")
 
-    # Guzzle theme options (see theme.conf for more information)
-    html_theme_options = {
-        # Set the name of the project to appear in the sidebar
-        "project_nav_name": "Project Name",
-    }
+    extensions.append("ustack_sphinx_theme")
 
-There are a lot more ways to customize this theme, as this more comprehensive
-example shows:
+
+
+其他扩展项:
 
 .. code-block:: python
 
@@ -78,26 +74,27 @@ example shows:
         "projectlink": "http://myproject.url",
     }
 
-Customizing the layout
+自定义布局
 ======================
 
-You can customize the theme by overriding Jinja template blocks. For example,
-"layout.html" contains several blocks that can be overridden or extended.
+你可以通过重写覆盖Jinja模板块实现自定义主题。比如，"layout.html"就包含几个可以重写或扩展的块
 
-Place a "layout.html" file in your project's "/_templates" directory.
+将"layout.html"文件放入你的项目的"/_templates"文件夹中。
 
 .. code-block:: bash
 
     mkdir source/_templates
     touch source/_templates/layout.html
 
-Then, configure your "conf.py":
+然后配置"conf.py"文件:
 
 .. code-block:: python
 
     templates_path = ['_templates']
 
-Finally, edit your override file "source/_templates/layout.html":
+    
+
+最后，编辑重写"source/_templates/layout.html":
 
 ::
 
@@ -110,7 +107,7 @@ Finally, edit your override file "source/_templates/layout.html":
     {{ super() }}
     {%- endblock %}
 
-.. note::
 
-  If you are using Readthedocs, then you might run into an issue where they
-  don't currently allow you to extend layout.html.
+注意：
+
+  如果你正在使用Readthedocs，你可能会遇到当前不允许修改“layout.html”文件的问题.

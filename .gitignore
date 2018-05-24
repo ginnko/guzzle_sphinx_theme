@@ -1,6 +1,7 @@
 *.pyc
 dist
-guzzle_sphinx_theme.egg-info
+ustack_sphinx_theme.egg-info
+build
 demo/_build
 
 node_modules

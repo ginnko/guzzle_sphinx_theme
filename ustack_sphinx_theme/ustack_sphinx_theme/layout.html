@@ -3,12 +3,20 @@
 {# Do this so that bootstrap is included before the main css file #}
 {%- block htmltitle %}
   {% set script_files = script_files + ["_static/myscript.js"] %}
+  <meta charset=utf-8>
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/fonts/open-sans/stylesheet.css', 1) }}" />
   <!-- Licensed under the SIL Open Font License -->
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/fonts/source-serif-pro/source-serif-pro.css', 1) }}" />
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}" />
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/bootstrap-theme.min.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/guzzle.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/base.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/logo.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/search.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/globaltoc.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/body.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/download.css', 1) }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ super() }}
 {%- endblock %}
@@ -65,12 +73,12 @@
   <div class="footer-relations">
     {% if prev %}
       <div class="pull-left">
-        <a class="btn btn-default" href="{{ prev.link|e }}" title="{{ _('previous chapter')}} (use the left arrow)">{{ prev.title }}</a>
+        <a class="btn btn-default" href="{{ prev.link|e }}" title="{{ _('previous chapter')}} (use the left arrow)">{{ "上一篇" }}</a>
       </div>
     {% endif %}
     {%- if next and next.title != '&lt;no title&gt;' %}
       <div class="pull-right">
-        <a class="btn btn-default" href="{{ next.link|e }}" title="{{ _('next chapter')}} (use the right arrow)">{{ next.title }}</a>
+        <a class="btn btn-default" href="{{ next.link|e }}" title="{{ _('next chapter')}} (use the right arrow)">{{ "下一篇" }}</a>
       </div>
     {%- endif %}
     </div>
@@ -87,9 +95,11 @@
         {%- include sidebartemplate %}
         {%- endfor %}
       {% else %}
+
         {% include "logo-text.html" %}
-        {% include "globaltoc.html" %}
         {% include "searchbox.html" %}
+        {% include "globaltoc.html" %}
+        {% include "download.html" %}
       {%- endif %}
     </div>
   </div>
@@ -114,7 +124,7 @@
           {% block breadcrumbs %}
           <div role="navigation" aria-label="breadcrumbs navigation">
             <ol class="breadcrumb">
-              <li><a href="{{ pathto(master_doc) }}">Docs</a></li>
+              <li><a href="{{ pathto(master_doc) }}">{{ shorttitle }}</a></li>
               {% for doc in parents %}
                 <li><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
               {% endfor %}
@@ -151,11 +161,11 @@
   });
 </script>
 <script type="text/javascript" src="{{ pathto('_static/js/bootstrap.js', 1)}}"></script>
-{%- block footer_wrapper %}
+<!-- {%- block footer_wrapper %}
   <div class="footer">
     &copy; Copyright {{ copyright }}. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
-{%- endblock %}
+{%- endblock %} -->
 {%- block ga %}
   {%- if theme_google_analytics_account %}
     <script type="text/javascript">

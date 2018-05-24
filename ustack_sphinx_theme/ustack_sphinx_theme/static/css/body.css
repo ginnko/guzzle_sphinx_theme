@@ -1,0 +1,198 @@
+/* 布局控制 */
+.container-wrapper {
+  position: relative;
+}
+
+/* 面包屑 */
+
+
+#right-column .breadcrumb a {
+  font-size: 14px;
+  color: #01AFC9;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+#right-column .breadcrumb li {
+  font-size: 14px;
+  color: rgba(37,47,61,0.85);
+  line-height: 22px;
+}
+
+#right-column .breadcrumb {
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid #E8E8E8;
+  padding-bottom: 28px;
+}
+
+#right-column div[role='navigation'] {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  #right-column {
+    padding: 50px 10px 8px 10px;
+  }
+
+  #right-column div[role='navigation'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+/* 正文 */
+.document {
+  /* border-top: 1px solid rgb(216, 228, 239); */
+  font-size: 14px;
+  color: #393C40;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+
+
+a {
+  color: #01AFC9;
+}
+
+/* 标题 */
+.container-wrapper h1 {
+  background-color: #fff;
+  font-size: 28px;
+  color: #252F3D;
+  letter-spacing: 1px;
+  line-height: 40px;
+  border-bottom: none;
+  /* padding-left: 0; */
+  margin-bottom: 0;
+}
+.container-wrapper h2,
+.container-wrapper h2 a {
+  font-size: 24px;
+  color: #252F3D;
+  letter-spacing: 0.86px;
+  line-height: 40px;
+  font-weight: normal;
+  border: none;
+}
+
+.container-wrapper h3 {
+  font-size: 22px;
+  color: #252F3D;
+  letter-spacing: 0.86px;
+  line-height: 35px;
+  font-weight: normal;
+}
+
+/* 正文目录 */
+.container-wrapper #table-of-contents {
+  background-color: #fff;
+  border: none;
+  padding-left: 0;
+}
+
+.container-wrapper #table-of-contents p.topic-title {
+  font-size: 24px;
+  color: #252F3D;
+  letter-spacing: 0.86px;
+  line-height: 40px;
+  font-weight: normal;
+}
+
+.container-wrapper #table-of-contents ul>li>a,
+.container-wrapper .toctree-wrapper ul>li>a {
+  font-size: 14px;
+  color: #01AFC9;
+  line-height: 21px;
+}
+
+.container-wrapper #table-of-contents ul>li>ul>li>a,
+.container-wrapper .toctree-wrapper ul>li>ul>li>a {
+  font-size: 12px;
+  color: #01AFC9;
+  line-height: 21px;
+}
+
+/* 上一篇/下一篇按钮 */
+div.footer-relations {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+div.footer-relations a.btn.btn-default {
+  background-color: #01AFC9;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-image: none;
+  text-shadow: none;
+  border: none;
+  margin: 8px;
+}
+
+/* 图片尺寸 */
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* 表格尺寸 */
+table {
+  width: 100%;
+}
+
+
+/* 代码 */
+pre, code {
+  background-color: #FCFCFC;
+  border: 1px solid #EDEDED;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+/* 引用 */
+blockquote {
+  background-color: #FCFCFC;
+  border: 1px solid #EDEDED;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #252F3D;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+/* 注解、技巧、注意 */
+.admonition p,
+.admonition li {
+  font-size: 12px;
+  color: #252F3D;
+}
+
+/* 搜索页 */
+.search-page-form button {
+  background-color: #01AFC9;
+  border-radius: 2px;
+  background-image: none;
+  color: #fff;
+  text-shadow: none;
+}
+
+.search-page-form input.form-control {
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDED;
+  border-radius: 2px;
+}
+
+#search-results ul.search li {
+  padding-left: 0;
+}

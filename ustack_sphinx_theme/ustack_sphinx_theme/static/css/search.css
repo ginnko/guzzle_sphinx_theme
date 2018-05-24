@@ -1,0 +1,10 @@
+.sidebar-block-search {
+  margin-top: 0;
+  background-color: #01AFC9;
+  margin-bottom: 0;
+}
+#main-search form .input-group input {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 2px;
+}

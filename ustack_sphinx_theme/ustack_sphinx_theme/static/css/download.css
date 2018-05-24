@@ -1,0 +1,21 @@
+.download {
+  padding: 0 22px;
+}
+.download h2 {
+  font-size: 14px;
+  color: rgba(37,47,61,0.85);
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+.download .download_item {
+  display: inline-block;
+}
+.download ul {
+  padding-left: 0;
+}
+.download li + li {
+  margin-left: 10px;
+}
+.download a {
+  font-size: 14px;
+}

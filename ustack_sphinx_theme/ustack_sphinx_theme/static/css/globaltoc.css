@@ -1,0 +1,35 @@
+.container-wrapper .sidebar-wrapper h2 {
+  font-size: 14px;
+  color: rgba(37,47,61,0.85);
+  line-height: 22px;
+  margin-bottom: 0;
+}
+
+.sidebar-block.sidebar-block-globaltoc {
+  margin-top: 40px;
+}
+
+.sidebar-block h2 {
+  font-size: 14px;
+  color: rgba(37,47,61,0.85);
+  font-weight: normal;
+  line-height: 22px;
+}
+
+div.sphinxsidebar .sidebar-toc a {
+  font-size: 14px;
+  color: #6C777A;
+  line-height: 22px;
+}
+
+.sidebar-toc ul li a:hover {
+  background-color: rgba(1,175,201,0.10);
+  color: #01AFC9;
+  border-right: 1px solid #01AFC9;
+}
+
+.sidebar-toc ul li.current > a {
+  background-color: rgba(1,175,201,0.10);
+  color: #01AFC9;
+  border: none;
+}
